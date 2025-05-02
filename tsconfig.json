@@ -1,0 +1,58 @@
+// {
+//   "compilerOptions": {
+//     "target": "es5",
+//     "lib": ["dom", "dom.iterable", "esnext"],
+//     "allowJs": true,
+//     "skipLibCheck": true,
+//     "strict": true,
+//     "noEmit": true,
+//     "esModuleInterop": true,
+//     "module": "esnext",
+//     "moduleResolution": "bundler",
+//     "resolveJsonModule": true,
+//     "isolatedModules": true,
+//     "jsx": "preserve",
+//     "incremental": true,
+//     "paths": {
+//       "@/*": ["./*"]
+//     }
+//   },
+//   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+//   "exclude": ["node_modules"]
+// }
+
+{
+  "compilerOptions": {
+    // Next.js recommended settings
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "paths": {
+      "@/*": ["./*"]
+    },
+    
+    // Additional settings for Prisma seeding
+    "outDir": "./dist",               // Needed for compilation output
+    "rootDir": ".",                   // Ensure it includes all source files
+    "types": ["node"]                 // Include Node.js types
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "prisma/**/*"],
+  "exclude": ["node_modules"],
+  
+  // Separate config for seeding (optional but recommended)
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"            // Required for Prisma seeding
+    }
+  }
+}
