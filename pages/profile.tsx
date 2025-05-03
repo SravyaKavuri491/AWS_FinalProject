@@ -135,7 +135,7 @@ export default function Profile() {
       minH="100vh" 
       onMouseEnter={handleMouseEnter} 
       onMouseLeave={handleMouseLeave}
-      bgImage="url('/images/profile.jpg')"
+      bgImage="url('https://halloween-event-wallpaper-bucket.s3.us-east-1.amazonaws.com/profile.jpg')"
       bgSize="cover"
       bgPosition="center"
       bgAttachment="fixed"
